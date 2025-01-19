@@ -4,3 +4,5 @@
 /* para importar las fuentes de google fonts*/
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css');
 /*para importar los iconos de fontawesome*/
+@import url(layout.css);
+/*@import url(header.css);*/
