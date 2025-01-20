@@ -14,52 +14,53 @@
 <body>
     <div class="wrapper">
         <header>
-            <nav class="navbar navbar-expand-lg ">
-                <div class="container-fluid">
-                    <!-- Logo de la tienda -->
-                    <a class="navbar-brand" href="#">UPGREEN</a>
+            <div class="container">
+                <nav class="navbar bg-body-tertiary.bg-success">
+                    <div class="container-fluid">
+                        <figure class="figure">
+                            <img src="./assets/images/freepik__background__75203.png"
+                                class="figure-img img-fluid rounded" alt="logo">
+                        </figure>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Buscar">
+                            <button class="btn bg-success text-white" type="submit">Buscar</button>
+                            <a class="ms-3 lg fs-3 text-success" href="#carrito">
+                                <i class="fa-solid fa-cart-shopping "></i>
+                            </a>
+                        </form>
 
-                    <!-- Botón para menú en dispositivos móviles -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- Menú de navegación -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
-                            </li>
-                        </ul>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
         <main>
-            <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-                <!-- Card centrada -->
-                <div class="card" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagen de ejemplo">
-                    <div class="card-body">
-                        <h5 class="card-title">Título de la tarjeta</h5>
-                        <p class="card-text">Algunos ejemplos de texto para llenar la tarjeta. Puedes personalizar esto
-                            según lo que necesites.</p>
-                        <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+            <div class="container">
+
+                <section id="plantas">
+                    <div class="grid">
+                        <!--  <article>
+                            <figure>
+                                <img src="./assets/images/portia-weiss-cbIZm7Bo5Gc-unsplash.jpg" alt="planta">
+                            </figure>
+                            <h3>Nombre de la planta</h3>
+                            <p>Detalles planta
+
+                                <span>Precio</span>
+                            </p>
+                            <button>Agregar al carrito/button>
+                        </article> -->
+                    </div>
+                </section>
+
+                <!-- seccion de galeria de plantas y descripción -->
+                <div class="container mt-5">
+                    <!-- Botones de Anterior y Siguiente -->
+                    <div class="d-flex justify-content-around">
+                        <button class="btn btn-secondary bg-success" type="submit">Anterior</button>
+                        <button class="btn btn-primary bg-success" type="submit">Siguiente</button>
                     </div>
                 </div>
             </div>
-
-            <!-- seccion de galeria de plantas y descripción -->
         </main>
 
     </div>
