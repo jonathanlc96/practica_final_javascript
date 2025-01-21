@@ -2,7 +2,7 @@ const plantas = [
     {
         "id": 1,
         "nombre": "Aloe Vera",
-        "imagen": "https://example.com/imagenes/aloe-vera.jpg",
+        "imagen": "./assets/images/planta1.png",
         "descripcion": "Planta suculenta conocida por sus propiedades medicinales.",
         "precio": 12.99,
         "stock": 30
@@ -10,7 +10,7 @@ const plantas = [
     {
         "id": 2,
         "nombre": "Cactus",
-        "imagen": "https://example.com/imagenes/cactus.jpg",
+        "imagen": "./assets/images/planta2.png",
         "descripcion": "Planta resistente a la sequía, ideal para interiores soleados.",
         "precio": 7.50,
         "stock": 50
@@ -18,7 +18,7 @@ const plantas = [
     {
         "id": 3,
         "nombre": "Lavanda",
-        "imagen": "https://example.com/imagenes/lavanda.jpg",
+        "imagen": "./assets/images/planta3.png",
         "descripcion": "Planta aromática con flores moradas y un aroma relajante.",
         "precio": 15.75,
         "stock": 20
@@ -26,7 +26,7 @@ const plantas = [
     {
         "id": 4,
         "nombre": "Orquídea",
-        "imagen": "https://example.com/imagenes/orquidea.jpg",
+        "imagen": "./assets/images/planta4.png",
         "descripcion": "Planta exótica con flores hermosas y colores vibrantes.",
         "precio": 25.00,
         "stock": 15
@@ -34,7 +34,7 @@ const plantas = [
     {
         "id": 5,
         "nombre": "Helecho",
-        "imagen": "https://example.com/imagenes/helecho.jpg",
+        "imagen": "./assets/images/planta5.png",
         "descripcion": "Planta de hojas verdes que crece bien en ambientes húmedos.",
         "precio": 9.99,
         "stock": 40
@@ -42,7 +42,7 @@ const plantas = [
     {
         "id": 6,
         "nombre": "Geranios",
-        "imagen": "https://example.com/imagenes/geranios.jpg",
+        "imagen": "./assets/images/planta6.jpg",
         "descripcion": "Plantas con flores coloridas y vibrantes, perfectas para jardinería.",
         "precio": 8.99,
         "stock": 25
@@ -50,7 +50,7 @@ const plantas = [
     {
         "id": 7,
         "nombre": "Ficus",
-        "imagen": "https://example.com/imagenes/ficus.jpg",
+        "imagen": "./assets/images/planta7.png",
         "descripcion": "Planta de interior de hojas grandes y brillantes.",
         "precio": 18.00,
         "stock": 18
@@ -58,7 +58,7 @@ const plantas = [
     {
         "id": 8,
         "nombre": "Bambú de la suerte",
-        "imagen": "https://example.com/imagenes/bambu-de-la-suerte.jpg",
+        "imagen": "./assets/images/planta8.jpg",
         "descripcion": "Planta que simboliza buena suerte y prosperidad.",
         "precio": 10.50,
         "stock": 50
@@ -66,7 +66,7 @@ const plantas = [
     {
         "id": 9,
         "nombre": "Poto",
-        "imagen": "https://example.com/imagenes/poto.jpg",
+        "imagen": "./assets/images/planta9.jpg",
         "descripcion": "Planta de interior fácil de cuidar con hojas en forma de corazón.",
         "precio": 6.99,
         "stock": 60
@@ -74,7 +74,7 @@ const plantas = [
     {
         "id": 10,
         "nombre": "Begonias",
-        "imagen": "https://example.com/imagenes/begonias.jpg",
+        "imagen": "./assets/images/planta10.jpg",
         "descripcion": "Plantas ornamentales con flores pequeñas y coloridas.",
         "precio": 11.50,
         "stock": 35
@@ -82,7 +82,7 @@ const plantas = [
     {
         "id": 11,
         "nombre": "Lirio de paz",
-        "imagen": "https://example.com/imagenes/lirio-de-paz.jpg",
+        "imagen": "./assets/images/planta11.jpg",
         "descripcion": "Planta de interior de flores blancas y hojas largas y brillantes.",
         "precio": 13.20,
         "stock": 28
@@ -90,7 +90,7 @@ const plantas = [
     {
         "id": 12,
         "nombre": "Ciclamen",
-        "imagen": "https://example.com/imagenes/ciclamen.jpg",
+        "imagen": "./assets/images/planta12.jpg",
         "descripcion": "Planta perenne con flores de colores brillantes como el rosa y blanco.",
         "precio": 14.99,
         "stock": 22
@@ -98,7 +98,7 @@ const plantas = [
     {
         "id": 13,
         "nombre": "Spathiphyllum",
-        "imagen": "https://example.com/imagenes/spathiphyllum.jpg",
+        "imagen": "./assets/images/planta13.jpg",
         "descripcion": "Planta decorativa con flores blancas y hojas verdes oscuras.",
         "precio": 16.80,
         "stock": 17
@@ -106,7 +106,7 @@ const plantas = [
     {
         "id": 14,
         "nombre": "Pachira",
-        "imagen": "https://example.com/imagenes/pachira.jpg",
+        "imagen": "./assets/images/planta14.jpg",
         "descripcion": "Planta conocida como árbol de la suerte, con hojas brillantes y grandes.",
         "precio": 20.00,
         "stock": 10
@@ -114,7 +114,7 @@ const plantas = [
     {
         "id": 15,
         "nombre": "Tomillo",
-        "imagen": "https://example.com/imagenes/tomillo.jpg",
+        "imagen": "./assets/images/planta15.jpg",
         "descripcion": "Planta aromática utilizada en la cocina para dar sabor.",
         "precio": 5.50,
         "stock": 45
@@ -122,7 +122,7 @@ const plantas = [
     {
         "id": 16,
         "nombre": "Crisantemo",
-        "imagen": "https://example.com/imagenes/crisantemo.jpg",
+        "imagen": "./assets/images/planta16.jpg",
         "descripcion": "Planta ornamental con flores en una amplia gama de colores.",
         "precio": 12.00,
         "stock": 30
@@ -130,7 +130,7 @@ const plantas = [
     {
         "id": 17,
         "nombre": "Calatea",
-        "imagen": "https://example.com/imagenes/calatea.jpg",
+        "imagen": "./assets/images/planta17.png",
         "descripcion": "Planta tropical con hojas decorativas que cambian de color.",
         "precio": 19.50,
         "stock": 12
@@ -138,7 +138,7 @@ const plantas = [
     {
         "id": 18,
         "nombre": "Suculentas variadas",
-        "imagen": "https://example.com/imagenes/suculentas.jpg",
+        "imagen": "./assets/images/planta18.png",
         "descripcion": "Plantas suculentas de diferentes formas y tamaños, fáciles de cuidar.",
         "precio": 4.99,
         "stock": 70
@@ -146,7 +146,7 @@ const plantas = [
     {
         "id": 19,
         "nombre": "Aguacate",
-        "imagen": "https://example.com/imagenes/aguacate.jpg",
+        "imagen": "./assets/images/planta19.jpg",
         "descripcion": "Árbol frutal que produce aguacates, ideal para jardines grandes.",
         "precio": 22.00,
         "stock": 8
@@ -154,7 +154,7 @@ const plantas = [
     {
         "id": 20,
         "nombre": "Fresia",
-        "imagen": "https://example.com/imagenes/fresia.jpg",
+        "imagen": "./assets/images/planta20.png",
         "descripcion": "Planta de flores fragantes, generalmente de color amarillo o morado.",
         "precio": 9.30,
         "stock": 38
