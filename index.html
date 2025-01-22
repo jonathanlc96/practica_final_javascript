@@ -13,6 +13,7 @@
 
 <body>
     <div class="wrapper">
+        <!-- header usando clases de bootstrap, posiblemente se cambie -->
         <header>
             <div class="container">
                 <nav class="navbar bg-body-tertiary.bg-success">
@@ -24,7 +25,7 @@
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="Buscar">
                             <button class="btn bg-success text-white" type="submit">Buscar</button>
-                            <a class="ms-3 lg fs-3 text-success" href="#carrito" data-bs-toggle="offcanvas"
+                            <a class="ms-3 lg fs-3 text-success" href="#carrito" data-bs-toggle="offcanvas" //
                                 data-bs-target="#offcanvasCarrito">
                                 <i class="fa-solid fa-cart-shopping "></i>
                             </a>
@@ -34,25 +35,14 @@
                 </nav>
             </div>
         </header>
+
+
         <main>
             <!-- seccion de galeria de plantas y descripción -->
             <div class="container">
-
                 <section id="plantas">
-
                     <div class="grid">
-
-                        <!-- <article class="col-12 col-md-6 col-lg-4>
-                            <figure>
-                                <img src="./assets/images/portia-weiss-cbIZm7Bo5Gc-unsplash.jpg" alt="planta">
-                            </figure>
-                            <h3>Nombre de la planta</h3>
-                            <p>Detalles planta
-
-                                <span>Precio</span>
-                            </p>
-                            <button>Agregar al carrito/button>
-                        </article>  -->
+                        <!-- aquí se pintan dinamicamente los articles que se rellenan con el array de data.js  -->
                     </div>
                 </section>
 
@@ -65,16 +55,12 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul id="listaAdd">
-                            <!-- <li>Producto 1 - $10</li>
-                            <li>Producto 2 - $15</li>
-                            <li>Producto 3 - $20</li> -->
+                            <!-- aquí se pintan dinámicamente los li de cada elemento que se añade al carrito con los botones de +,- y Eliminar-->
                         </ul>
-                        <hr>
-                        <h5 id="totalCarrito">Total: <!--  <span></span> --> </h5>
-                        <button class="btn btn-success w-100">Ir a Pagar</button>
+
+                        <button id="btnPagar" class="btn btn-success w-100 ">Ir a Pagar</button>
                     </div>
                 </div>
-
                 <!-- Botones de Anterior y Siguiente -->
                 <div class="container mt-5">
                     <div class="d-flex justify-content-around">
