@@ -57,8 +57,6 @@ function paginasTotales() {
 }
 // Función para actualizar los botones dependiendo si estas en la primera página o si estas en la última
 function actualizarBotones() {
-    /*   const btnAnterior = document.querySelector("#btnAnterior");
-      const btnSiguiente = document.querySelector("#btnSiguiente"); */
 
     if (paginaActual === 1) {
         btnAnterior.setAttribute("disabled", true);
@@ -74,8 +72,6 @@ function actualizarBotones() {
 }
 
 // Event listeners para los botones
-/* const btnAnterior = document.querySelector("#btnAnterior");
-const btnSiguiente = document.querySelector("#btnSiguiente"); */
 
 btnAnterior.addEventListener("click", () => {
     if (paginaActual > 1) {
