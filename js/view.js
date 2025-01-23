@@ -2,6 +2,8 @@
 let paginaActual = 1;
 const itemsPorPagina = 9;//depende del media query y las columnas del grid
 const sectionPlantas = document.querySelector('#plantas .grid');
+const btnAnterior = document.querySelector("#btnAnterior");
+const btnSiguiente = document.querySelector("#btnSiguiente");
 
 // Función para pintar una planta
 function pintarUnaPlanta(planta, dom) {
@@ -42,7 +44,7 @@ function pintarTodasPlantas(list, dom) {
 }
 
 // Función para renderizar las plantas según la página actual
-function renderizarPlantas(pagina) {
+function renderizarPlantasPorPagina(pagina) {
     const inicio = (pagina - 1) * itemsPorPagina;
     const fin = inicio + itemsPorPagina;
     const plantasPagina = plantas.slice(inicio, fin);
@@ -55,8 +57,8 @@ function paginasTotales() {
 }
 // Función para actualizar los botones dependiendo si estas en la primera página o si estas en la última
 function actualizarBotones() {
-    const btnAnterior = document.querySelector("#btnAnterior");
-    const btnSiguiente = document.querySelector("#btnSiguiente");
+    /*   const btnAnterior = document.querySelector("#btnAnterior");
+      const btnSiguiente = document.querySelector("#btnSiguiente"); */
 
     if (paginaActual === 1) {
         btnAnterior.setAttribute("disabled", true);
@@ -72,22 +74,22 @@ function actualizarBotones() {
 }
 
 // Event listeners para los botones
-const btnAnterior = document.querySelector("#btnAnterior");
-const btnSiguiente = document.querySelector("#btnSiguiente");
+/* const btnAnterior = document.querySelector("#btnAnterior");
+const btnSiguiente = document.querySelector("#btnSiguiente"); */
 
 btnAnterior.addEventListener("click", () => {
     if (paginaActual > 1) {
         paginaActual--;
-        renderizarPlantas(paginaActual);
+        renderizarPlantasPorPagina(paginaActual);
     }
 });
 
 btnSiguiente.addEventListener("click", () => {
     if (paginaActual < Math.ceil(plantas.length / itemsPorPagina)) {
         paginaActual++;
-        renderizarPlantas(paginaActual);
+        renderizarPlantasPorPagina(paginaActual);
     }
 });
 
 // Inicialización
-renderizarPlantas(paginaActual);
+renderizarPlantasPorPagina(paginaActual);

@@ -1,7 +1,6 @@
 header {
-    padding: 1rem;
+    padding: 10px;
     background-color: lightgreen;
-    top: 0px;
     width: 100%;
 
     .container {
@@ -13,15 +12,19 @@ header {
             width: 8rem;
         }
     }
+
+    a {
+        color: black;
+    }
 }
 
 
 
 
-@media(width >=62rem) {
+@media(width >=1004px) {
 
     header nav {
-        width: calc(100% - 12.5rem);
+        width: calc(100% - 8rem);
         padding: 0.625rem 0;
     }
 

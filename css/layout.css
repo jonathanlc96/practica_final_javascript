@@ -32,7 +32,7 @@ img {
 }
 
 .navbar {
-    background-color: lightgreen;
+    background-color: var(--primary-color);
 }
 
 
@@ -81,6 +81,32 @@ figure img {
 }
 
 
+footer {
+    background-color: var(--primary-color);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    margin-top: 15px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul li {
+        display: inline-block;
+        margin: 0px 5px;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+}
+
+
 @media(width >=48rem) {
 
     /*media query para vista en tablet*/
@@ -97,28 +123,3 @@ figure img {
 
     }
 }
-
-
-/* 
-footer {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    ul li {
-        display: inline-block;
-        margin: 0px 5px;
-
-        a {
-            color: white;
-        }
-
-    }
-
-} */
