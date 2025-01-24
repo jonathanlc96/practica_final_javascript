@@ -47,6 +47,10 @@ function pintarCarrito() {
     // Recorrer el carrito y crear elementos dinámicamente
     carrito.forEach(producto => {
         const li = document.createElement('li');
+        const divBotones = document.createElement('div');
+        divBotones.classList.add('botonesCarrito');
+
+        li.classList.add('itemCarrito')
         li.textContent = `${producto.nombre} - ${producto.precio.toFixed(2)}€ x ${producto.cantidad} `;
 
         // Botón para aumentar la cantidad
@@ -55,8 +59,10 @@ function pintarCarrito() {
         const btnDecrementar = crearBoton('-', () => decrementar(producto));
         // Botón para eliminar el producto del carrito
         const btnEliminar = crearBoton('Eliminar', () => eliminar(producto));
+        btnEliminar.classList.add('btnEliminar');
 
         // Agregar botones al li
+        li.appendChild(divBotones)
         li.appendChild(btnIncrementar);
         li.appendChild(btnDecrementar);
         li.appendChild(btnEliminar);
@@ -80,6 +86,7 @@ function pintarCarrito() {
 function crearBoton(texto, callback) {
     const boton = document.createElement('button');
     boton.textContent = texto;
+    boton.classList.add('botones', 'btn', 'border-black');
     boton.addEventListener('click', callback);
     return boton;
 }

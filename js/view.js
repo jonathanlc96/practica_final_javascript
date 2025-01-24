@@ -26,7 +26,7 @@ function pintarUnaPlanta(planta, dom) {
     const btn = document.createElement('button');
     btn.textContent = 'Agregar al carrito';
     btn.addEventListener('click', agregarAlCarrito);
-    btn.dataset.nombre = planta.nombre;
+    btn.dataset.nombre = planta.nombre; //dataset para guardar datos en el boton y pasarlos a la funcion agregarAlCarrito de funcionesCarrito.js
     btn.dataset.precio = planta.precio;
     btn.dataset.stock = planta.stock;
     btn.dataset.id = planta.id;
@@ -59,15 +59,16 @@ function paginasTotales() {
 function actualizarBotones() {
 
     if (paginaActual === 1) {
-        btnAnterior.setAttribute("disabled", true);
+        btnAnterior.disabled = true
+
     } else {
-        btnAnterior.removeAttribute("disabled");
+        btnAnterior.disabled = false;
     }
 
     if (paginaActual === paginasTotales()) {
-        btnSiguiente.setAttribute("disabled", true);
+        btnSiguiente.disabled = true
     } else {
-        btnSiguiente.removeAttribute("disabled");
+        btnSiguiente.disabled = false;
     }
 }
 
