@@ -30,7 +30,7 @@ function pintarUnaPlanta(planta, dom) {
     btn.dataset.precio = planta.precio;
     btn.dataset.stock = planta.stock;
     btn.dataset.id = planta.id;
-    btn.classList.add('btn', 'btn-primary', 'btn-md', 'bg-success', 'addCarrito');
+    btn.classList.add('btn', 'btn-md', 'btn-success', 'addCarrito');
     p.appendChild(span);
     article.append(figure, h3, p, btn);
 
@@ -55,12 +55,12 @@ function renderizarPlantasPorPagina(pagina) {
 function paginasTotales() {
     return Math.ceil(plantas.length / itemsPorPagina)
 }
+
 // Función para actualizar los botones dependiendo si estas en la primera página o si estas en la última
 function actualizarBotones() {
 
     if (paginaActual === 1) {
         btnAnterior.disabled = true
-
     } else {
         btnAnterior.disabled = false;
     }
@@ -82,11 +82,10 @@ btnAnterior.addEventListener("click", () => {
 });
 
 btnSiguiente.addEventListener("click", () => {
-    if (paginaActual < Math.ceil(plantas.length / itemsPorPagina)) {
+    if (paginaActual < Math.ceil(plantas.length / itemsPorPagina)) {  //math.ceil para redondear hacia el numero mas alto de paginas
         paginaActual++;
         renderizarPlantasPorPagina(paginaActual);
     }
 });
 
-// Inicialización
 renderizarPlantasPorPagina(paginaActual);

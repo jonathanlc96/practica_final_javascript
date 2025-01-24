@@ -1,9 +1,9 @@
 let carrito = [];
 const bodyOfCanvas = document.querySelector('.ofcanvas-body');
-const ulCarrito = document.querySelector('#listaAdd');
+const ulCarrito = document.querySelector('#listaCarrito');
 const btnPagar = document.querySelector('#btnPagar');
+const btnVaciar = document.querySelector('#btnVaciar');
 
-// Función para agregar un producto al carrito
 function agregarAlCarrito(event) {
     const producto = plantas.find(plant => plant.id === Number(event.target.dataset.id));
 
@@ -44,7 +44,7 @@ function pintarCarrito() {
     // Limpiar el contenido del offcanvas
     ulCarrito.textContent = '';
 
-    // Recorrer el carrito y crear elementos dinámicamente
+    // Recorre el carrito y crea elementos dinámicamente
     carrito.forEach(producto => {
         const li = document.createElement('li');
         const divBotones = document.createElement('div');
@@ -54,11 +54,11 @@ function pintarCarrito() {
         li.textContent = `${producto.nombre} - ${producto.precio.toFixed(2)}€ x ${producto.cantidad} `;
 
         // Botón para aumentar la cantidad
-        const btnIncrementar = crearBoton('+', () => incrementar(producto));
+        const btnIncrementar = crearBotonesLi('+', () => incrementar(producto));
         // Botón para disminuir la cantidad
-        const btnDecrementar = crearBoton('-', () => decrementar(producto));
+        const btnDecrementar = crearBotonesLi('-', () => decrementar(producto));
         // Botón para eliminar el producto del carrito
-        const btnEliminar = crearBoton('Eliminar', () => eliminar(producto));
+        const btnEliminar = crearBotonesLi('Eliminar', () => eliminar(producto));
         btnEliminar.classList.add('btnEliminar');
 
         // Agregar botones al li
@@ -73,17 +73,18 @@ function pintarCarrito() {
 
     // Calcular y mostrar el total
     const total = calcularTotal();
-    const totalElement = document.createElement('h4');
-    totalElement.textContent = `Total: ${total.toFixed(2)}€ `;
-    totalElement.classList = 'totalCarrito';
+    const totalCarrito = document.createElement('h4');
+    totalCarrito.textContent = `Total: ${total.toFixed(2)}€ `;
+    totalCarrito.classList = 'totalCarrito';
 
-    ulCarrito.appendChild(totalElement);
+    ulCarrito.appendChild(totalCarrito);
+    btnVaciar.addEventListener('click', vaciarCarrito)
     btnPagar.addEventListener('click', mensajePago);
     btnPagar.dataset.totalCompra = total;
 }
 
-// Crear botón con evento
-function crearBoton(texto, callback) {
+
+function crearBotonesLi(texto, callback) {
     const boton = document.createElement('button');
     boton.textContent = texto;
     boton.classList.add('botones', 'btn', 'border-black');
@@ -91,7 +92,8 @@ function crearBoton(texto, callback) {
     return boton;
 }
 
-// Incrementar la cantidad de un producto en el carrito
+
+
 function incrementar(producto) {
     const productoStock = plantas.find(p => p.id === producto.id);
 
@@ -105,13 +107,14 @@ function incrementar(producto) {
     pintarCarrito();
 }
 
-// Decrementar la cantidad de un producto en el carrito
+
+
 function decrementar(producto) {
     const productoStock = plantas.find(p => p.id === producto.id);
 
     if (producto.cantidad > 1) {
         producto.cantidad -= 1;
-        productoStock.stock += 1; // Devolver una unidad al stock
+        productoStock.stock += 1; // Devolver 1 al stock
     } else {
         // Si la cantidad es 1, eliminar del carrito y devolver todo al stock
         carrito = carrito.filter(item => item.id !== producto.id);
@@ -131,13 +134,25 @@ function eliminar(producto) {
 
     // Eliminar del carrito
     carrito = carrito.filter(item => item.id !== producto.id);
-
     pintarCarrito();
 }
 
-// Calcular el total del carrito
 function calcularTotal() {
     return carrito.reduce((sum, producto) => sum + producto.precio * producto.cantidad, 0);
+}
+
+function vaciarCarrito() {
+
+    // Para volver al stock original de los productos
+    carrito.forEach(producto => {
+        const productoOriginal = plantas.find(p => p.id === producto.id);
+        if (productoOriginal) {
+            productoOriginal.stock += producto.cantidad;
+        }
+    });
+    carrito = [];
+    ulCarrito.textContent = '';
+
 }
 
 //Mensaje al hacer el pago

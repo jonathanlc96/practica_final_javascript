@@ -1,0 +1,34 @@
+/* -------- css para la lista del carrito y los botones */
+ul#listaAdd {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li.itemCarrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.0625rem solid #ddd;
+    padding: 0.625rem 0;
+}
+
+ul .btnEliminar {
+    background-color: rgb(237, 89, 89);
+}
+
+ul li div.botonesCarrito {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+ul li div button.botones {
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.875rem;
+}
+
+ul h4.totalCarrito {
+    margin-top: 1.875rem;
+}

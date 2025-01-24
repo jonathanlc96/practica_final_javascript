@@ -1,0 +1,57 @@
+/* css para los articles del grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /*mobile first: una columna debajo de la otra*/
+    gap: 15px;
+    padding: 0 1.25rem;
+    margin: 0 auto;
+    margin-top: 1.25rem;
+
+}
+
+article {
+    box-shadow: 0.125rem 0.125rem 0.25rem gray;
+    border: 0.125rem solid gray;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 0.625rem;
+
+    /* para que los elementos dentro del article queden posicionados igual en cada una de las cards sin importar el tamaño de la imagen o o texto  */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Asegura que el contenido quede repartido */
+    align-items: center;
+
+    &:hover {
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.02);
+        background-color: rgb(231, 246, 231);
+    }
+}
+
+figure img {
+    height: 12.5rem;
+    object-fit: contain;
+    margin-bottom: 0.625rem;
+}
+
+/* media query para los articles del grid */
+
+@media(width >=48rem) {
+
+    /*media query para vista en tablet*/
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(width >=62.75rem) {
+
+    /*media query para vista en desktop*/
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
